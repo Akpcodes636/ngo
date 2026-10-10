@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Healthy Golden Years Initiative — Website
+
+The official website for **Healthy Golden Years Initiative**, a Nigerian non-profit organisation founded by Juliet Ugbomeh (RN, BNSc, RPHN) to promote the health, dignity, and wellbeing of older persons.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Icons:** Lucide React
+- **Payments:** Paystack (server-side via `/api/donate/initialize`)
+
+## Project Structure
+
+```
+app/                  # Next.js App Router pages
+  about/              # About Us — mission, values, founder biography
+  contact/            # Contact page
+  donate/             # Donation page + success/failed states
+  gallery/            # Photo gallery
+  get-involved/       # Volunteering and engagement
+  impact/             # Impact metrics and stories
+  privacy-policy/     # Privacy Policy
+  programs/           # Programmes offered
+  safeguarding-policy/# Safeguarding Policy
+  terms/              # Terms of Use
+  api/donate/         # Server-side Paystack integration
+
+components/           # Shared UI components (Navbar, Footer, Cards, etc.)
+data/                 # Static site content (site config, programs, team, etc.)
+public/               # Static assets (images, icons)
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in the project root. The donation flow requires:
 
-## Learn More
+```env
+PAYSTACK_SECRET_KEY=sk_live_...
+```
 
-To learn more about Next.js, take a look at the following resources:
+Without this key the donation endpoint returns `501` and the form falls back to the Bank Transfer option automatically.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All site content is managed through files in the `data/` directory:
 
-## Deploy on Vercel
+| File | Contents |
+|---|---|
+| `data/site.ts` | Organisation name, mission, vision, contact details, nav links |
+| `data/team.ts` | Founder biography, leadership placeholders, partners |
+| `data/programs.ts` | Programme descriptions and approach steps |
+| `data/values.ts` | Core values |
+| `data/impact.ts` | Impact statistics |
+| `data/images.ts` | Image paths and alt text |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To update contact details, edit the `contact` object in `data/site.ts`. To update the founder biography, edit the `founder` object in `data/team.ts`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+The site is designed for deployment on [Vercel](https://vercel.com). Push to your connected repository and Vercel will build and deploy automatically. Set `PAYSTACK_SECRET_KEY` as an environment variable in the Vercel project settings before going live with donations.
+
+## Organisation
+
+**Healthy Golden Years Initiative**
+Ijede, Lagos 104102, Nigeria
+Tel: 08031642580
