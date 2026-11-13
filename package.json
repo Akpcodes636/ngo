@@ -2,11 +2,12 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "node init && next dev",
-    "build": "node init && next build",
-    "start": "node init && next start",
-    "lint": "eslint"
+ "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tests/*.test.mts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
