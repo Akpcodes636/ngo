@@ -226,7 +226,6 @@ export function DonationForm() {
         <legend className="mb-3 text-sm font-bold uppercase tracking-wide text-forest-700">
           Select Amount
         </legend>
-
         <DonationAmountSelector
           selected={amount}
           customAmount={customAmount}

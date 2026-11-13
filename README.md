@@ -14,7 +14,11 @@ The official website for **Healthy Golden Years Initiative**, a Nigerian non-pro
 
 ```
 app/                  # Next.js App Router pages
+<<<<<<< HEAD
   about/              # About Us mission, values, founder biography
+=======
+  about/              # About Us — mission, values, founder biography
+>>>>>>> 31e8c0eb981eabe898e7d10cf36bcda147dd29a6
   contact/            # Contact page
   donate/             # Donation page + success/failed states
   gallery/            # Photo gallery
