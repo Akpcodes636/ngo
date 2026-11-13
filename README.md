@@ -1,4 +1,4 @@
-# Healthy Golden Years Initiative — Website
+# Healthy Golden Years Initiative  Website
 
 The official website for **Healthy Golden Years Initiative**, a Nigerian non-profit organisation founded by Juliet Ugbomeh (RN, BNSc, RPHN) to promote the health, dignity, and wellbeing of older persons.
 
@@ -14,7 +14,7 @@ The official website for **Healthy Golden Years Initiative**, a Nigerian non-pro
 
 ```
 app/                  # Next.js App Router pages
-  about/              # About Us — mission, values, founder biography
+  about/              # About Us mission, values, founder biography
   contact/            # Contact page
   donate/             # Donation page + success/failed states
   gallery/            # Photo gallery

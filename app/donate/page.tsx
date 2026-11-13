@@ -122,7 +122,7 @@ export default function DonatePage() {
           <SectionHeading
             eyebrow="Where Your Support Goes"
             title="Every Donation Expands Our Reach."
-            description="We do not publish exact percentage breakdowns until independently verified — but here is how your support helps our work grow."
+            description="We do not publish exact percentage breakdowns until independently verified but here is how your support helps our work grow."
             align="center"
             tone="light"
             className="mx-auto"
@@ -131,7 +131,7 @@ export default function DonatePage() {
             {supportAreas.map((area) => (
               <div
                 key={area.title}
-                className="rounded-lg border border-white/10 bg-white/5 p-7"
+                className="rounded-lg border border-white/10 bg-white/5 p-5"
               >
                 <span className="flex h-12 w-12 items-center justify-center rounded-md bg-gold-500 text-forest-900">
                   <area.icon size={22} aria-hidden />
@@ -149,7 +149,7 @@ export default function DonatePage() {
       </section>
 
       {/* TRANSPARENCY */}
-      <section id="transparency" className="scroll-mt-24 bg-cream py-20 sm:py-24">
+      {/* <section id="transparency" className="scroll-mt-24 bg-cream py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Transparency"
@@ -173,7 +173,7 @@ export default function DonatePage() {
             ))}
           </div>
         </Container>
-      </section>
+      </section> */}
     </>
   );
 }

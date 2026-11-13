@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 // Stub newsletter signup endpoint. Wire this up to a real provider
 // (e.g. Mailchimp, Brevo, ConvertKit) when credentials are available.
-// No secrets are referenced here — any API key must be read from a
+// No secrets are referenced here any API key must be read from a
 // server-only environment variable when the integration is implemented.
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);

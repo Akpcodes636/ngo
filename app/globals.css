@@ -4,7 +4,7 @@
   --background: #FAF7EF;
   --foreground: #1B2A20;
 
-  /* Deep forest green — primary */
+  /* Deep forest green  primary */
   --color-forest-50: #F0F5F1;
   --color-forest-100: #DCE8DE;
   --color-forest-200: #B9D1BE;
@@ -16,7 +16,7 @@
   --color-forest-800: #172C20;
   --color-forest-900: #0F1F16;
 
-  /* Rich gold — accent */
+  /* Rich gold  accent */
   --color-gold-50: #FDF8EC;
   --color-gold-100: #FAEECB;
   --color-gold-200: #F3DB97;
@@ -144,16 +144,18 @@ body {
   }
 }
 
-/* Visible, high-contrast focus states for accessibility */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible,
-[tabindex]:focus-visible {
-  outline: 3px solid var(--color-gold-500);
-  outline-offset: 3px;
-  border-radius: 2px;
+/* Visible, high-contrast focus states for accessibility.
+   Layered in base so component focus-visible:* utilities can override it. */
+@layer base {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid var(--color-gold-500);
+    outline-offset: 3px;
+  }
 }
 
 ::selection {

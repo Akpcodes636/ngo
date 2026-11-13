@@ -56,26 +56,26 @@ export type Testimonial = {
   isPlaceholder: boolean;
 };
 
-// PLACEHOLDER testimonials — replace with real, consented quotes from
+// PLACEHOLDER testimonials replace with real, consented quotes from
 // program participants, families, volunteers or partners.
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "[Placeholder testimonial — to be replaced with a real quote from a program participant.]",
+      "[Placeholder testimonial to be replaced with a real quote from a program participant.]",
     name: "Program Participant",
     role: "Community Member",
     isPlaceholder: true,
   },
   {
     quote:
-      "[Placeholder testimonial — to be replaced with a real quote from a family caregiver.]",
+      "[Placeholder testimonial to be replaced with a real quote from a family caregiver.]",
     name: "Family Caregiver",
     role: "Caregiver Education Program",
     isPlaceholder: true,
   },
   {
     quote:
-      "[Placeholder testimonial — to be replaced with a real quote from a volunteer or partner.]",
+      "[Placeholder testimonial to be replaced with a real quote from a volunteer or partner.]",
     name: "Community Volunteer",
     role: "Outreach Volunteer",
     isPlaceholder: true,

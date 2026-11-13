@@ -24,7 +24,7 @@ export default function HomePage() {
     <>
       <Hero />
 
-      {/* WHY WE EXIST — the narrative begins: older adults deserve dignity */}
+      {/* WHY WE EXIST  the narrative begins: older adults deserve dignity */}
       <section className="bg-cream py-20 sm:py-[90px]">
         <Container className="grid items-center gap-[18px] lg:grid-cols-2 lg:gap-[18px]">
           <AnimateIn animation="fade-left" className="relative order-2 aspect-4/3 w-full overflow-hidden rounded-lg lg:order-1">
@@ -81,7 +81,7 @@ export default function HomePage() {
               const Icon = approachIcons[i];
               return (
                 <AnimateIn key={step.title} animation="fade-up" delay={i * 80}>
-                  <div className="rounded-lg border border-white/10 bg-white/5 p-5 text-center sm:p-7">
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-5 text-center sm:p-5 h-full w-full">
                     <span className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-gold-500 text-forest-900">
                       <Icon size={26} aria-hidden />
                     </span>

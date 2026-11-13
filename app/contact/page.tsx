@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { MessageCircle, Phone, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ContactForm } from "@/components/ContactForm";
+import Image from "next/image";
 import { AnimateIn } from "@/components/AnimateIn";
 import { contact, socialLinks } from "@/data/site";
 import {
@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Healthy Golden Years Initiative — for partnerships, volunteering, media enquiries or general questions about our elderly health programs.",
+    "Get in touch with Healthy Golden Years Initiative for partnerships, volunteering, media enquiries or general questions about our elderly health programs.",
 };
 
 const iconMap = {
@@ -36,7 +36,7 @@ export default function ContactPage() {
             level="h1"
             eyebrow="Contact"
             title="We'd Love to Hear From You."
-            description="Whether you're a partner, volunteer, donor or simply curious about our work — reach out."
+            description="Whether you're a partner, volunteer, donor or simply curious about our work reach out."
             tone="light"
             className="max-w-2xl"
           />
@@ -51,7 +51,7 @@ export default function ContactPage() {
                 <MessageCircle size={22} aria-hidden />
               </span>
               <div>
-                <h3 className="font-semibold text-forest-800">WhatsApp</h3>
+                <h3 className="font-semibold text-forest-800">Email</h3>
                 <p className="mt-1 text-stone-warm">{contact.whatsapp}</p>
               </div>
             </div>
@@ -99,8 +99,21 @@ export default function ContactPage() {
             </div>
           </AnimateIn>
 
-          <AnimateIn animation="fade-right" delay={100} className="rounded-lg border border-forest-100 bg-white p-7 shadow-sm sm:p-10 lg:col-span-3">
-            <ContactForm />
+          <AnimateIn
+            animation="fade-right"
+            delay={100}
+            className="rounded-lg border border-forest-100 bg-white p-7 shadow-sm sm:p-10 lg:col-span-3"
+          >
+            {/* <ContactForm /> */}
+            <div>
+              <Image
+                src="/image/about-1.jpg"
+                width={500}
+                height={500}
+                alt="images of elderly"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </AnimateIn>
         </Container>
       </section>

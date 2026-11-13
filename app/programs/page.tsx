@@ -40,7 +40,7 @@ export default function ProgramsPage() {
             level="h1"
             eyebrow="Our Programs"
             title="Six Ways We Support Healthy Ageing."
-            description="Every program is built around education, prevention, connection and independence — meeting older adults where they are."
+            description="Every program is built around education, prevention, connection and independence meeting older adults where they are."
             tone="light"
             className="max-w-3xl"
           />

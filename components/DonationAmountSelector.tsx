@@ -63,12 +63,14 @@ export function DonationAmountSelector({
             id="custom-amount"
             type="number"
             min={100}
-            inputMode="numeric"
+            max={999999.99}
+            step={0.01}
+            inputMode="decimal"
             value={customAmount}
             onChange={(e) => onCustomAmountChange(e.target.value)}
             placeholder="e.g. 15000"
             required
-            className="w-full rounded-md border-2 border-forest-200 px-4 py-3 text-base focus-visible:outline-[3px] focus-visible:outline-gold-500"
+            className="w-full rounded-md border-2 border-forest-200 px-4 py-3 text-base focus-visible:outline-none"
           />
         </div>
       )}

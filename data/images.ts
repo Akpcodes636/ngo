@@ -42,7 +42,7 @@ const pexelsSource = (id: number): string => `https://www.pexels.com/photo/${id}
 
 export const logo: SiteImage = {
   src: "/image/logo.jpg",
-  alt: "Healthy Golden Years Initiative logo — an elderly man and woman beside a heart and leaf symbol",
+  alt: "Healthy Golden Years Initiative logo an elderly man and woman beside a heart and leaf symbol",
 };
 
 export const heroImages: SiteImage[] = [
@@ -270,7 +270,7 @@ export const galleryImages: GalleryImage[] = [
     src: pexels(30677596),
     alt: "Business partners in discussion during a community health partnership meeting",
     category: "Partnerships",
-    caption: "Stronger Together — Community and Healthcare Partners",
+    caption: "Stronger Together Community and Healthcare Partners",
     credit: "NinthGrid / Pexels",
     sourceUrl: pexelsSource(30677596),
   },

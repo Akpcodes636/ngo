@@ -1,43 +1,64 @@
 import { NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
+import {
+  getGlobalPayApiKey,
+  verifyDonationPayment,
+} from "@/app/lib/supabase/payments/service";
+import type { VerificationState } from "@/app/lib/supabase/payments/verification";
 
-// Verifies a Paystack transaction server-side using the secret key, then
-// (once a database is connected) records the donation and triggers a
-// confirmation email/receipt. Called from the /donate/success page.
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+// GET /api/donate/verify?reference=<merchant reference>
+//
+// Asks GlobalPay (server-side requery) whether the donation identified by OUR
+// merchant reference was paid. A reference only selects which of our records
+// to check; it can never mark anything as paid by itself. Success requires
+// GlobalPay to confirm status, our reference, NGN and our stored amount.
+
+const HTTP_STATUS: Record<VerificationState, number> = {
+  successful: 200,
+  pending: 200,
+  failed: 200,
+  not_found: 404,
+  invalid_reference: 400,
+  needs_review: 409,
+  unavailable: 503,
+};
+
+const MESSAGES: Partial<Record<VerificationState, string>> = {
+  not_found: "Donation reference not found.",
+  invalid_reference: "A valid donation reference is required.",
+  needs_review:
+    "We could not automatically confirm this payment. Our team will review it. Please contact support with your reference.",
+  unavailable: "We can't confirm your payment right now. Please try again shortly.",
+};
+
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const reference = searchParams.get("reference");
+  const requestId = randomUUID();
+  const headers = { "Cache-Control": "no-store", "X-Request-ID": requestId };
 
-  if (!reference) {
-    return NextResponse.json({ error: "Missing reference." }, { status: 400 });
-  }
-
-  const secretKey = process.env.PAYSTACK_SECRET_KEY;
-  if (!secretKey) {
+  if (!getGlobalPayApiKey()) {
     return NextResponse.json(
-      { error: "Payment verification is not yet configured." },
-      { status: 501 }
+      { verified: false, status: "unavailable", error: "Payment verification is not configured.", requestId },
+      { status: 501, headers },
     );
   }
 
-  try {
-    const res = await fetch(
-      `https://api.paystack.co/transaction/verify/${encodeURIComponent(reference)}`,
-      { headers: { Authorization: `Bearer ${secretKey}` } }
-    );
-    const data = await res.json();
+  const reference = new URL(request.url).searchParams.get("reference")?.trim();
+  const outcome = await verifyDonationPayment(reference);
 
-    if (!res.ok || data?.data?.status !== "success") {
-      return NextResponse.json({ verified: false }, { status: 200 });
-    }
-
-    // TODO: mark the donation record as complete in the database and
-    // trigger a confirmation email/receipt to the donor.
-
-    return NextResponse.json({ verified: true, amount: data.data.amount / 100 });
-  } catch {
-    return NextResponse.json(
-      { error: "Unable to verify payment right now." },
-      { status: 502 }
-    );
-  }
+  return NextResponse.json(
+    {
+      verified: outcome.state === "successful",
+      status: outcome.state,
+      reference: outcome.reference,
+      ...(outcome.state === "successful"
+        ? { amount: outcome.amount, currency: "NGN" }
+        : {}),
+      ...(MESSAGES[outcome.state] ? { error: MESSAGES[outcome.state] } : {}),
+      requestId,
+    },
+    { status: HTTP_STATUS[outcome.state], headers },
+  );
 }

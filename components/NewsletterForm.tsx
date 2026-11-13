@@ -28,7 +28,7 @@ export function NewsletterForm() {
   if (status === "success") {
     return (
       <p className="mt-4 rounded-md bg-forest-700 px-4 py-3 text-sm font-medium text-white">
-        Thank you — you&rsquo;re subscribed.
+        Thank you you&rsquo;re subscribed.
       </p>
     );
   }

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 // Stub contact endpoint. Wire this up to an email service (e.g. Resend,
 // SendGrid) or CRM when credentials are available. Any API key must be
-// read from a server-only environment variable — never exposed client-side.
+// read from a server-only environment variable never exposed client-side.
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
   const { name, email, subject, message } = body ?? {};

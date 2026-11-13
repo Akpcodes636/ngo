@@ -27,7 +27,7 @@ export const programs: Program[] = [
     shortDescription:
       "Community-based activities that connect older adults with health information, screening opportunities and support.",
     description:
-      "We take health information directly into communities — meeting older adults where they already gather. These outreach activities create opportunities for screening referrals, health conversations and connection, helping to close the gap between older adults and the health information and services they need.",
+      "We take health information directly into communities meeting older adults where they already gather. These outreach activities create opportunities for screening referrals, health conversations and connection, helping to close the gap between older adults and the health information and services they need.",
     image: {src:"/image/gallery-2.jpg", alt: "A community health outreach event with older adults and volunteers"}
   },
   {
@@ -37,7 +37,7 @@ export const programs: Program[] = [
     shortDescription:
       "Practical education around nutrition, physical activity, medication awareness, emotional wellbeing and healthy daily routines.",
     description:
-      "Healthy ageing is built through daily habits. We equip older adults with practical, easy-to-apply guidance on nutrition, safe physical activity, medication awareness and emotional wellbeing — helping them build sustainable routines that support long-term independence and quality of life.",
+      "Healthy ageing is built through daily habits. We equip older adults with practical, easy-to-apply guidance on nutrition, safe physical activity, medication awareness and emotional wellbeing helping them build sustainable routines that support long-term independence and quality of life.",
     image: {src:"/image/gallery-3.jpg", alt: "Older adults participating in a self-care and healthy ageing workshop"}
   },
   {
@@ -47,7 +47,7 @@ export const programs: Program[] = [
     shortDescription:
       "Building community networks that help older adults feel connected, valued and supported.",
     description:
-      "Isolation is one of the quiet challenges of ageing. We work to build supportive community networks around older adults — connecting them with peers, volunteers and local support systems so that no one has to navigate ageing alone.",
+      "Isolation is one of the quiet challenges of ageing. We work to build supportive community networks around older adults connecting them with peers, volunteers and local support systems so that no one has to navigate ageing alone.",
     image: {src:"/image/gallery-4.jpg", alt: "A group of older adults and volunteers engaging in a community support activity"},
   },
   {
@@ -67,7 +67,7 @@ export const programs: Program[] = [
     shortDescription:
       "Promoting early awareness and preventive approaches through community outreach and health-focused initiatives.",
     description:
-      "Early awareness saves lives. Through community-focused initiatives, we promote the importance of regular health checks and help connect older adults with screening opportunities and health information — encouraging a proactive, rather than reactive, approach to health.",
+      "Early awareness saves lives. Through community-focused initiatives, we promote the importance of regular health checks and help connect older adults with screening opportunities and health information encouraging a proactive, rather than reactive, approach to health.",
     image: {src:"/image/gallery-6.jpg", alt: "Older adults participating in a health screening event"},
   },
 ];

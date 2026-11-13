@@ -1,6 +1,6 @@
 // Central site configuration: organization identity, navigation, contact
 // placeholders and social links. Update contact details here once the
-// organization provides verified information — placeholders are marked
+// organization provides verified information placeholders are marked
 // clearly and must not be treated as real until replaced.
 
 export const site = {
@@ -33,7 +33,7 @@ export const footerLinks = [
   { label: "Gallery", href: "/gallery" },
   { label: "Get Involved", href: "/get-involved" },
   { label: "Donate", href: "/donate" },
-  { label: "Contact", href: "/contact" },
+  // { label: "Contact", href: "/contact" },
 ] as const;
 
 export const legalLinks = [
@@ -48,23 +48,23 @@ export const contact = {
   phone: "08031642580",
   addressLine1: "Ijede",
   addressLine2: "Lagos 104102, Nigeria",
-  whatsapp: "[TO BE PROVIDED]",
+  whatsapp: "info@healthygoldenyears.care",
 } as const;
 
-// PLACEHOLDER — replace with verified/live social profile URLs.
+// PLACEHOLDER replace with verified/live social profile URLs.
 export const socialLinks = [
   { label: "Facebook", href: "#", icon: "facebook" },
   { label: "Instagram", href: "#", icon: "instagram" },
   { label: "X (Twitter)", href: "#", icon: "twitter" },
   { label: "LinkedIn", href: "#", icon: "linkedin" },
-  { label: "YouTube", href: "#", icon: "youtube" },
+  { label: "YouTube", href: "https://www.youtube.com/@HealthyGoldenYears-l5j", icon: "youtube" },
 ] as const;
 
-// PLACEHOLDER — replace with verified bank details before going live.
+// PLACEHOLDER replace with verified bank details before going live.
 export const bankTransfer = {
-  accountName: "[TO BE PROVIDED]",
-  bankName: "[TO BE PROVIDED]",
-  accountNumber: "[TO BE PROVIDED]",
+  accountName: "Healthy golden years initiative",
+  bankName: "Providus bank",
+  accountNumber: "1310571479",
 } as const;
 
 export const donationAmountsNGN = [5000, 10000, 25000, 50000, 100000] as const;

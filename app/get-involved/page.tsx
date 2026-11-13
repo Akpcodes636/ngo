@@ -18,7 +18,7 @@ const ways = [
     icon: HandCoins,
     title: "Donate",
     description:
-      "Support the organization's programs — from preventive health education to community outreach and elderly support.",
+      "Support the organization's programs from preventive health education to community outreach and elderly support.",
     cta: "Donate Now",
     href: "/donate",
   },
@@ -57,7 +57,7 @@ export default function GetInvolvedPage() {
             level="h1"
             eyebrow="Get Involved"
             title="Everyone Has a Role to Play."
-            description="Whether through giving, time, partnership or your voice — there's a meaningful way for you to support healthy ageing in our communities."
+            description="Whether through giving, time, partnership or your voice there's a meaningful way for you to support healthy ageing in our communities."
             tone="light"
           />
           <div className="relative aspect-4/3 w-full overflow-hidden rounded-lg">
@@ -102,7 +102,7 @@ export default function GetInvolvedPage() {
 
       <CTASection
         title="Not Sure Where to Start?"
-        description="Reach out and tell us how you'd like to help — we'll help you find the right fit."
+        description="Reach out and tell us how you'd like to help we'll help you find the right fit."
         primaryLabel="Contact Us"
         primaryHref="/contact"
       />

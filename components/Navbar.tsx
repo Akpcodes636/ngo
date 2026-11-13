@@ -28,7 +28,7 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-3 rounded-md"
-          aria-label={`${site.name} — Home`}
+          aria-label={`${site.name}Home`}
         >
           <Image
             src={logo.src}

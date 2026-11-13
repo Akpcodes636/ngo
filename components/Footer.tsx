@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./ui/Container";
-import { site, footerLinks, legalLinks, contact, socialLinks } from "@/data/site";
+import { site, footerLinks, contact, socialLinks } from "@/data/site";
 import { logo } from "@/data/images";
-import { NewsletterForm } from "./NewsletterForm";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -94,10 +93,10 @@ export function Footer() {
             <li>
               {contact.addressLine1}
               <br />
-              {contact.addressLine2}
+              {/* {contact.addressLine2} */}
             </li>
           </ul>
-          <h3 className="mt-6 text-sm font-bold uppercase tracking-wide text-gold-300">
+          {/* <h3 className="mt-6 text-sm font-bold uppercase tracking-wide text-gold-300">
             Legal
           </h3>
           <ul className="mt-4 space-y-3">
@@ -111,24 +110,16 @@ export function Footer() {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
 
-        <div className="lg:col-span-1">
-          <h3 className="text-sm font-bold uppercase tracking-wide text-gold-300">
-            Stay Connected
-          </h3>
-          <p className="mt-4 text-[15px] text-sage-light/90">
-            Get occasional updates on our programs and community outreach.
-          </p>
-          <NewsletterForm />
-        </div>
+       
       </Container>
 
       <div className="border-t border-white/10">
         <Container className="flex flex-col items-center justify-between gap-3 py-6 text-center text-sm text-sage-light/70 sm:flex-row sm:text-left">
           <p>© 2026 Healthy Golden Years Initiative. All rights reserved.</p>
-          <p>Registered Nonprofit Organization — Nigeria</p>
+          <p>Registered Nonprofit Organization Nigeria</p>
         </Container>
       </div>
     </footer>

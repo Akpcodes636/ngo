@@ -49,7 +49,7 @@ export default function AboutPage() {
               supported with dignity.
             </p>
             <p className="mt-2 text-base sm:text-[20px] leading-relaxed text-[#43586C]">
-              We set out to change that — starting with education,
+              We set out to change that starting with education,
               community outreach and a belief that prevention and self-care
               can meaningfully improve how older adults experience their
               later years.
@@ -128,7 +128,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {approachSteps.map((step, i) => (
               <AnimateIn key={step.title} animation="fade-up" delay={i * 80}>
-                <div className="rounded-lg bg-white p-7 shadow-sm">
+                <div className="rounded-lg bg-white p-6 shadow-sm h-full w-full">
                   <span className="font-display text-3xl font-bold text-gold-500">
                     0{i + 1}
                   </span>
@@ -223,7 +223,7 @@ export default function AboutPage() {
                 &ldquo;{founder.quote}&rdquo;
               </p>
               <footer className="mt-2 text-sm text-gold-300">
-                — {founder.name}
+                 {founder.name}
               </footer>
             </blockquote>
 
@@ -296,7 +296,7 @@ export default function AboutPage() {
 
       <CTASection
         title="Want to Learn More About Our Work?"
-        description="Explore our programs or reach out — we would love to connect with you."
+        description="Explore our programs or reach out we would love to connect with you."
         primaryLabel="View Our Programs"
         primaryHref="/programs"
         secondaryLabel="Contact Us"

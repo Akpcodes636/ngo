@@ -24,7 +24,7 @@ export default function ImpactPage() {
             level="h1"
             eyebrow="Our Impact"
             title="Every Number Represents a Person."
-            description="We are an early-stage initiative building our track record transparently. The figures below will be updated as programs launch and outcomes are verified — we will never inflate what we haven't yet achieved."
+            description="We are an early-stage initiative building our track record transparently. The figures below will be updated as programs launch and outcomes are verified we will never inflate what we haven't yet achieved."
             tone="light"
             className="max-w-3xl"
           />
@@ -52,14 +52,14 @@ export default function ImpactPage() {
               title="Real Communities, Real Outcomes."
             />
             <p className="mt-6 text-lg leading-relaxed text-stone-warm">
-              Behind every statistic is a person — an older adult who
+              Behind every statistic is a person an older adult who
               learned how to manage a health condition, a family that felt
               less alone, a community that came together to support its
               elders. As our programs grow, we are committed to sharing
               honest, verified stories of the people we serve.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-stone-warm">
-              We report our outcomes transparently — publishing real
+              We report our outcomes transparently publishing real
               progress rather than inflated numbers, so partners and
               supporters can trust what we share.
             </p>
